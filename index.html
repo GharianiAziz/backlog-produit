@@ -1,219 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Stories - BEST Rent A Car</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #007BFF;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .priority-red { color: #d9534f; font-weight: bold; }
-        .priority-orange { color: #f0ad4e; font-weight: bold; }
-        .priority-yellow { color: #f7e967; font-weight: bold; }
-        .priority-blue { color: #5bc0de; font-weight: bold; }
-        ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Backlog Produit - Location de Voiture</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: #f4f4f4;
+        color: #222;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        color: #003c8f;
+        text-shadow: none;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 1100px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 900px;
+    }
+
+    th {
+        background: #0066cc;
+        color: white;
+        padding: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+        background: #f7f7f7;
+    }
+
+    tr:hover {
+        background: #e9f3ff;
+        transition: 0.2s;
+    }
+
+    .prio {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: bold;
+    }
+    .circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .high { background: #ff3b3b; }
+    .medium { background: #ff9900; }
+    .mid { background: #ffd500; }
+    .low { background: #0099ff; }
+</style>
+
 </head>
 <body>
 
-    <h1>User Stories - BEST Rent A Car</h1>
+<h1>Backlog Produit – Système de Location de Voiture</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>User Story</th>
-                <th>Priorité</th>
-                <th>Story Points</th>
-                <th>Critères d’Acceptation</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>US-01</td>
-                <td>En tant que Client, je veux créer un compte afin de pouvoir réserver une voiture</td>
-                <td class="priority-red">🔴 TRÈS HAUTE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>Champs obligatoires (nom, email, mot de passe, CIN)</li>
-                        <li>Vérification email unique</li>
-                        <li>Message de confirmation</li>
-                        <li>Compte enregistré dans la table utilisateur</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-02</td>
-                <td>En tant que Client / Agent / Administrateur, je veux me connecter afin d’accéder à mon espace</td>
-                <td class="priority-red">🔴 TRÈS HAUTE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>Vérification email + mot de passe</li>
-                        <li>Redirection selon rôle</li>
-                        <li>Message d’erreur en cas d’échec</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-03</td>
-                <td>En tant que Client, je veux consulter la liste des voitures afin de choisir la voiture à louer</td>
-                <td class="priority-red">🔴 TRÈS HAUTE</td>
-                <td>8</td>
-                <td>
-                    <ul>
-                        <li>Affichage marque, modèle, année, prix/jour, statut</li>
-                        <li>Filtres (catégorie, disponibilité)</li>
-                        <li>Données provenant de la classe <em>Voiture</em></li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-04</td>
-                <td>En tant que Client, je veux réserver une voiture afin de bloquer la période de location</td>
-                <td class="priority-red">🔴 TRÈS HAUTE</td>
-                <td>8</td>
-                <td>
-                    <ul>
-                        <li>Sélection date début/fin</li>
-                        <li>Vérification disponibilité</li>
-                        <li>Calcul montant (méthode <em>CalculerMontant()</em>)</li>
-                        <li>Création d’un objet <em>Reservation</em></li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-05</td>
-                <td>En tant que Client, je veux payer ma réservation afin de valider ma location</td>
-                <td class="priority-red">🔴 TRÈS HAUTE</td>
-                <td>8</td>
-                <td>
-                    <ul>
-                        <li>Choix mode de paiement (classe <em>Paiement</em>)</li>
-                        <li>Montant conforme à la réservation</li>
-                        <li>Mise à jour statut (méthode <em>validerPaiement()</em>)</li>
-                        <li>Paiement lié à la réservation</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-06</td>
-                <td>En tant que Agent, je veux ajouter, modifier ou supprimer une voiture afin de maintenir le catalogue à jour</td>
-                <td class="priority-orange">🟠 HAUTE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>CRUD complet sur <em>Voiture</em></li>
-                        <li>Statut modifiable avec <em>changerStatut()</em></li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-07</td>
-                <td>En tant que Agent, je veux gérer les réservations afin de confirmer ou annuler</td>
-                <td class="priority-orange">🟠 HAUTE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>Afficher toutes les réservations</li>
-                        <li>Confirmer (<em>confirmer()</em>) / annuler (<em>annuler()</em>)</li>
-                        <li>Mise à jour du statut</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-08</td>
-                <td>En tant que Agent, je veux consulter et gérer les paiements afin de suivre les transactions</td>
-                <td class="priority-orange">🟠 HAUTE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>Liste des paiements</li>
-                        <li>Statut : validé / en attente</li>
-                        <li>Lien réservation–paiement respecté</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-09</td>
-                <td>En tant qu’Administrateur, je veux gérer les comptes utilisateurs afin de contrôler le système</td>
-                <td class="priority-yellow">🟡 MOYENNE</td>
-                <td>5</td>
-                <td>
-                    <ul>
-                        <li>Liste des utilisateurs (clients/agents)</li>
-                        <li>Activer, désactiver, supprimer un compte</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-10</td>
-                <td>En tant qu’Administrateur, je veux voir les statistiques afin d’analyser le fonctionnement du système</td>
-                <td class="priority-yellow">🟡 MOYENNE</td>
-                <td>8</td>
-                <td>
-                    <ul>
-                        <li>Nombre total de réservations</li>
-                        <li>Revenus générés</li>
-                        <li>Voitures les plus louées</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-11</td>
-                <td>En tant qu’Administrateur, je veux consulter toutes les réservations afin de superviser l’activité</td>
-                <td class="priority-blue">🔵 BASSE</td>
-                <td>3</td>
-                <td>
-                    <ul>
-                        <li>Filtre par date, voiture, client</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>US-12</td>
-                <td>En tant qu’Administrateur, je veux consulter tous les paiements afin de vérifier les transactions</td>
-                <td class="priority-blue">🔵 BASSE</td>
-                <td>3</td>
-                <td>
-                    <ul>
-                        <li>Liste des paiements</li>
-                        <li>Filtre statut/date</li>
-                        <li>Lien vers la réservation associée</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="table-container">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User Story</th>
+        <th>Priorité</th>
+        <th>Story Points</th>
+        <th>Critères d’Acceptation</th>
+    </tr>
+
+    <tr>
+        <td>US-01</td>
+        <td>En tant que Client, je veux créer un compte afin de pouvoir réserver une voiture</td>
+        <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
+        <td>3</td>
+        <td>Champs obligatoires, email unique, confirmation, enregistrement</td>
+    </tr>
+
+    <tr>
+        <td>US-02</td>
+        <td>En tant que Client / Agent / Administrateur, je veux me connecter afin d’accéder à mon espace</td>
+        <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
+        <td>3</td>
+        <td>Vérification credentials, redirection par rôle, message erreur</td>
+    </tr>
+
+    <tr>
+        <td>US-03</td>
+        <td>En tant que Agent, je veux ajouter, modifier ou supprimer une voiture afin de maintenir le catalogue à jour</td>
+        <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
+        <td>5</td>
+        <td>CRUD voiture, changerStatut()</td>
+    </tr>
+
+    <tr>
+        <td>US-04</td>
+        <td>En tant que Client, je veux consulter la liste des voitures afin de choisir la voiture à louer</td>
+        <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
+        <td>3</td>
+        <td>Affichage complet, filtres, données Voiture</td>
+    </tr>
+
+    <tr>
+        <td>US-05</td>
+        <td>En tant que Client, je veux réserver une voiture</td>
+        <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
+        <td>3</td>
+        <td>Dates, disponibilité, montant, création réservation</td>
+    </tr>
+
+    <tr>
+        <td>US-06</td>
+        <td>En tant que Client, je veux payer ma réservation afin de valider ma location</td>
+        <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
+        <td>2</td>
+        <td>Mode paiement, montant correct, validerPaiement(), liaison</td>
+    </tr>
+
+    <tr>
+        <td>US-07</td>
+        <td>En tant que Agent, je veux gérer les réservations afin de confirmer ou annuler</td>
+        <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
+        <td>1</td>
+        <td>Liste, confirmer(), annuler(), MAJ statut</td>
+    </tr>
+
+    <tr>
+        <td>US-08</td>
+        <td>En tant que Agent, je veux consulter et gérer les paiements afin de suivre les transactions</td>
+        <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
+        <td>1</td>
+        <td>Liste, statut, lien réservation-paiement</td>
+    </tr>
+
+    <tr>
+        <td>US-09</td>
+        <td>En tant qu’Administrateur, je veux gérer les comptes utilisateurs afin de contrôler le système</td>
+        <td><span class="prio"><span class="circle mid"></span>MOYENNE</span></td>
+        <td>1</td>
+        <td>Liste, activer, désactiver, supprimer</td>
+    </tr>
+
+    <tr>
+        <td>US-10</td>
+        <td>En tant qu’Administrateur, je veux voir les statistiques afin d’analyser le fonctionnement du système</td>
+        <td><span class="prio"><span class="circle mid"></span>MOYENNE</span></td>
+        <td>1</td>
+        <td>Réservations, revenus, top voitures</td>
+    </tr>
+
+    <tr>
+        <td>US-11</td>
+        <td>En tant qu’Administrateur, je veux consulter toutes les réservations afin de superviser l’activité</td>
+        <td><span class="prio"><span class="circle low"></span>BASSE</span></td>
+        <td>1</td>
+        <td>Filtre par date, voiture, client</td>
+    </tr>
+
+    <tr>
+        <td>US-12</td>
+        <td>En tant qu’Administrateur, je veux consulter tous les paiements afin de vérifier les transactions</td>
+        <td><span class="prio"><span class="circle low"></span>BASSE</span></td>
+        <td>1</td>
+        <td>Liste, filtre statut/date, lien réservation</td>
+    </tr>
+
+</table>
+</div>
 
 </body>
 </html>
