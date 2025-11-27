@@ -19,7 +19,6 @@
         font-size: 2.2rem;
         margin-bottom: 25px;
         color: #003c8f;
-        text-shadow: none;
     }
 
     .table-container {
@@ -98,7 +97,7 @@
         <td>US-01</td>
         <td>En tant que Client, je veux créer un compte afin de pouvoir réserver une voiture</td>
         <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
-        <td>3</td>
+        <td>2</td>
         <td>Champs obligatoires, email unique, confirmation, enregistrement</td>
     </tr>
 
@@ -106,15 +105,15 @@
         <td>US-02</td>
         <td>En tant que Client / Agent / Administrateur, je veux me connecter afin d’accéder à mon espace</td>
         <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
-        <td>3</td>
-        <td>Vérification credentials, redirection par rôle, message erreur</td>
+        <td>2</td>
+        <td>Vérification credentials, redirection par rôle, message d’erreur</td>
     </tr>
 
     <tr>
         <td>US-03</td>
-        <td>En tant que Agent, je veux ajouter, modifier ou supprimer une voiture afin de maintenir le catalogue à jour</td>
+        <td>En tant qu’Agent, je veux ajouter, modifier ou supprimer une voiture afin de maintenir le catalogue à jour</td>
         <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
-        <td>5</td>
+        <td>3</td>
         <td>CRUD voiture, changerStatut()</td>
     </tr>
 
@@ -122,7 +121,7 @@
         <td>US-04</td>
         <td>En tant que Client, je veux consulter la liste des voitures afin de choisir la voiture à louer</td>
         <td><span class="prio"><span class="circle high"></span>TRÈS HAUTE</span></td>
-        <td>3</td>
+        <td>2</td>
         <td>Affichage complet, filtres, données Voiture</td>
     </tr>
 
@@ -144,22 +143,30 @@
 
     <tr>
         <td>US-07</td>
-        <td>En tant que Agent, je veux gérer les réservations afin de confirmer ou annuler</td>
+        <td>En tant qu’Agent, je veux confirmer une réservation afin de valider la demande du client</td>
         <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
         <td>1</td>
-        <td>Liste, confirmer(), annuler(), MAJ statut</td>
+        <td>Liste réservations, confirmer(), MAJ statut, notification</td>
     </tr>
 
     <tr>
         <td>US-08</td>
-        <td>En tant que Agent, je veux consulter et gérer les paiements afin de suivre les transactions</td>
+        <td>En tant qu’Agent, je veux annuler une réservation afin de gérer les demandes invalides</td>
+        <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
+        <td>1</td>
+        <td>Liste, annuler(), MAJ statut, notification</td>
+    </tr>
+
+    <tr>
+        <td>US-09</td>
+        <td>En tant qu’Agent, je veux consulter et gérer les paiements afin de suivre les transactions</td>
         <td><span class="prio"><span class="circle medium"></span>HAUTE</span></td>
         <td>1</td>
         <td>Liste, statut, lien réservation-paiement</td>
     </tr>
 
     <tr>
-        <td>US-09</td>
+        <td>US-10</td>
         <td>En tant qu’Administrateur, je veux gérer les comptes utilisateurs afin de contrôler le système</td>
         <td><span class="prio"><span class="circle mid"></span>MOYENNE</span></td>
         <td>1</td>
@@ -167,7 +174,7 @@
     </tr>
 
     <tr>
-        <td>US-10</td>
+        <td>US-11</td>
         <td>En tant qu’Administrateur, je veux voir les statistiques afin d’analyser le fonctionnement du système</td>
         <td><span class="prio"><span class="circle mid"></span>MOYENNE</span></td>
         <td>1</td>
@@ -175,7 +182,7 @@
     </tr>
 
     <tr>
-        <td>US-11</td>
+        <td>US-12</td>
         <td>En tant qu’Administrateur, je veux consulter toutes les réservations afin de superviser l’activité</td>
         <td><span class="prio"><span class="circle low"></span>BASSE</span></td>
         <td>1</td>
@@ -183,7 +190,7 @@
     </tr>
 
     <tr>
-        <td>US-12</td>
+        <td>US-13</td>
         <td>En tant qu’Administrateur, je veux consulter tous les paiements afin de vérifier les transactions</td>
         <td><span class="prio"><span class="circle low"></span>BASSE</span></td>
         <td>1</td>
